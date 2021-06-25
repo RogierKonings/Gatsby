@@ -1,7 +1,20 @@
+// src/global.d.ts
+declare const __PATH_PREFIX__: string
+
 import * as React from "react"
 import { Link } from "gatsby"
+import { ReactNode } from "react"
+import { ReactPortal } from "react"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({
+  location,
+  title,
+  children,
+}: {
+  location: URL
+  title: string
+  children: ReactNode | ReactPortal
+}) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
