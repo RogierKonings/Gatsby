@@ -10,6 +10,9 @@ export interface IPage {
     allMarkdownRemark: {
       nodes: IPost[]
     }
+    markdownRemark: IPost
+    previous: IPost
+    next: IPost
   }
   location: URL
 }

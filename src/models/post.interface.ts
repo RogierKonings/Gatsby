@@ -7,5 +7,6 @@ export interface IPost {
   fields: {
     slug: string
   }
+  html: string
   excerpt: string
 }
