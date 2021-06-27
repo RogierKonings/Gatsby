@@ -15,6 +15,14 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-image`,
     {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        sassOptions: {
+          includePaths: ["src/assets/global.scss", "src/assets/variables.scss", "src/assets/normalize.scss"]
+        }
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,

@@ -1,10 +1,12 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import { IPage } from "../models/page.interface"
+import Bio from '../../components/bio/bio'
+import Layout from '../../components/layout/layout'
+import Seo from '../../components/seo/seo'
+import { IPage } from '../../models/page.interface'
+
+import './blog-post.scss'
 
 const BlogPostTemplate = ({ data, location }: IPage) => {
   const post = data.markdownRemark

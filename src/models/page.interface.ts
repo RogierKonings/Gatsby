@@ -1,4 +1,4 @@
-import { IPost } from "./post.interface"
+import { IPost } from './post.interface'
 
 export interface IPage {
   data: {

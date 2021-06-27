@@ -1,10 +1,12 @@
 // src/global.d.ts
 declare const __PATH_PREFIX__: string
 
-import * as React from "react"
-import { Link } from "gatsby"
-import { ReactNode } from "react"
-import { ReactPortal } from "react"
+import * as React from 'react'
+import { Link } from 'gatsby'
+import { ReactNode } from 'react'
+import { ReactPortal } from 'react'
+
+import './layout.scss'
 
 const Layout = ({
   location,
@@ -37,11 +39,7 @@ const Layout = ({
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+      <footer>© {new Date().getFullYear()}</footer>
     </div>
   )
 }
