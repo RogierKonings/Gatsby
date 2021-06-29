@@ -1,4 +1,4 @@
-import './bio.scss'
+// import './bio.scss'
 
 /**
  * Bio component that queries for data

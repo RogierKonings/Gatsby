@@ -18,8 +18,12 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         sassOptions: {
-          includePaths: ["src/assets/global.scss", "src/assets/variables.scss", "src/assets/normalize.scss"]
-        }
+          includePaths: [
+            'src/assets/sass/variables.scss',
+            'src/assets/sass/normalize.scss',
+            'src/assets/sass/main.scss',
+          ],
+        },
       },
     },
     {
@@ -90,7 +94,7 @@ module.exports = {
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
+                  custom_elements: [{ 'content:encoded': node.html }],
                 })
               })
             },
@@ -113,7 +117,7 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
+            output: '/rss.xml',
           },
         ],
       },

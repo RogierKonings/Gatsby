@@ -2,11 +2,11 @@
 declare const __PATH_PREFIX__: string
 
 import * as React from 'react'
-import { Link } from 'gatsby'
 import { ReactNode } from 'react'
 import { ReactPortal } from 'react'
 
-import './layout.scss'
+import Navigation from '../navigation/navigation'
+import Footer from '../footer/footer'
 
 const Layout = ({
   location,
@@ -19,27 +19,16 @@ const Layout = ({
 }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  let header
-
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+    <div className="page-wrapper" data-is-root-path={isRootPath}>
+      <header className="global-header">
+        <Navigation />
+      </header>
       <main>{children}</main>
-      <footer>© {new Date().getFullYear()}</footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   )
 }
