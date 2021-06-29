@@ -6,8 +6,6 @@ import Layout from '../../components/layout/layout'
 import Seo from '../../components/seo/seo'
 import { IPage } from '../../models/page.interface'
 
-// import './blog-post.scss'
-
 const BlogPostTemplate = ({ data, location }: IPage) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
